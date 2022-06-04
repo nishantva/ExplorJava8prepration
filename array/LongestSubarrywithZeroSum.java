@@ -11,7 +11,7 @@ public class LongestSubarrywithZeroSum {
 		
 		 HashMap<Integer, Integer> hm = new HashMap<>();
 		 
-		 hm.put(0,0);
+		 hm.put(0,-1);
 		 int length =-1;
 		 int cumSum=0;
 		 
@@ -19,10 +19,10 @@ public class LongestSubarrywithZeroSum {
 			 cumSum=cumSum+arr[i];
 			 
 			 if(hm.containsKey(cumSum)) {
-				 length=Math.max(length, i-hm.get(cumSum)+1);
+				 length=Math.max(length, i-hm.get(cumSum));
 			 }
 			 else {
-				 hm.put(cumSum, i+1);
+				 hm.put(cumSum, i);
 			 }
 			 
 		 }
