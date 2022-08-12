@@ -5,11 +5,11 @@ public class MainSingleton {
 	public static void main(String arg[]) {
 		
 		
-		SingletonC singletonObject= SingletonC.getInstance();
+		SingletonEager singletonObject= SingletonEager.getInstance();
 		
 		singletonObject.simpleMethod();
 		
-        SingletonC singletonObject2= SingletonC.getInstance();
+		SingletonEager singletonObject2= SingletonEager.getInstance();
 		
 		singletonObject.simpleMethod();
 	}
