@@ -9,7 +9,7 @@ public class FourElements {
 		int arr[]={1, 5, 1, 0, 6, 0};
 		int n=arr.length;
 		int k=7;
-		
+		//n3
 		Arrays.sort(arr);
 		for(int i=0;i<n-3;i++) {
 			

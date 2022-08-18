@@ -6,7 +6,7 @@ public class ExelSheet {
 		String result="";
 		int n=26;
 		while(n>0) {
-			char c=(char) ('A'+(n-1) % 26);
+			char c=(char) ('A'+(n-1) % 26);//asii valye of 1 is 65
 			
 			result=c+result;
 			n= (n-1)/26;

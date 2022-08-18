@@ -1,4 +1,4 @@
-package array;
+n npackage array;
 
 public class RIghtmostGreatest {
 	public static void main(String arg[]) {

@@ -16,5 +16,5 @@ public class MooreVotingAlgo {
 	}
 	System.out.print(prev);
 	}
-
+ 
 }
