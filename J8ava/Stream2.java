@@ -104,6 +104,17 @@ public class Stream2 {
 		namesort.forEach(i->System.out.println(i));
 		
 		
+		List<Studentss>  inc=list.stream().map(e->{
+			
+			if(e.getAge()>25) {
+				e.setRollno(e.getRollno()*2);
+			}
+			return e;
+		}).collect(Collectors.toList());
+		
+		
+		System.out.print(inc);
+		
 	}
 
 }
