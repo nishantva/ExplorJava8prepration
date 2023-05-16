@@ -1,7 +1,7 @@
 
 import java.util.function.Predicate;
 
-public class PredicateDemo implements Predicate<Integer> {
+public  class PredicateDemo {//always prduce true and false
 
 	/*
 	 * @Override public boolean test(Integer t) {
@@ -16,16 +16,20 @@ public class PredicateDemo implements Predicate<Integer> {
 		 * expression//
 		 */
 
-		Predicate<Integer> predicate = (t) -> {
-			if (t % 2 == 0) {
-				return true;
-			} // direct by lambda
-			else {
-				return false;
-			}
-		};
-		System.out.print(predicate.test(7));
-
+		Predicate<String> checklength = s->s.length() >=5;
+		
+		//2
+		Predicate<String> checkeven=s->s.length() %2==0;
+		
+		System.out.println("length of string is grater than 5 "+checklength.test(" codeii"));
+			
+		System.out.println("after merge "+checklength.and(checkeven).test(" this is new string"));
+		
+		System.out.print("tet or"+checklength.or(checklength).test(" check"));
+		
+		
+		//take only one
+		System.out.print("negiate"+checklength.negate().test("codetest"));
 	}
 
 }

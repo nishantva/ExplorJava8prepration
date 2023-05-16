@@ -1,4 +1,4 @@
-package J8ava;
+
 //DemoComprator
 
 
@@ -26,7 +26,23 @@ class Students {
 			this.age=age;
 		
 	}
+		
+		public String getName() {
+			return name;
+		}
 
+		
+		public int getAge() {
+			return age;
+		}
+
+	@Override
+	public String toString() {
+		return "Students [rollno=" + rollno + ", name=" + name + ", age=" + age + "]";
+	}
+		
+		
+		
 		
 
 	 
@@ -41,30 +57,32 @@ class Students {
 	 
 	 public static void main(String arg[]) {
 		 
-		 List<Student> list=new ArrayList<>();
-		 list.add(new Student(12, "ram", 22));
-		 list.add(new Student(1, "mohit", 23));
-		 list.add(new Student(2, "nishant", 26));
-		 list.add(new Student(5, "shobit", 25));
+		 List<Students> list=new ArrayList<>();
+		 list.add(new Students(12, "ram", 22));
+		 list.add(new Students(1, "mohit", 23));
+		 list.add(new Students(2, "nishant", 26));
+		 list.add(new Students(5, "shobit", 25));
 		 
 		 
 		 
-		 Collections.sort(list, new Comparator<Student>() {
+		// Collections.sort(list, new Comparator<Students>() {
 
-				@Override
-				public int compare(Student o1, Student o2) {
-					if(o1.age==o2.age)
-						return 0;
+			//	@Override
+			//	public int compare(Students o1, Students o2) {
+				//	if(o1.age==o2.age)
+					//	return 0;
 					
-					else if(o1.age>o2.age)
-						return 1;
+				//	else if(o1.age>o2.age)
+					//	return 1;
 					
-					else
-						return -1;
-				}
-			});
+					//else
+						//return -1;
+			//	}
+		//	});
+		 
+		 Collections.sort(list,Comparator.comparingInt(Students:: getAge));
 			 
-		 for( Student s: list) {
+		 for( Students s: list) {
 			 System.out.println(s);
 		 }
 		 

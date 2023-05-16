@@ -1,6 +1,8 @@
-package J8ava;
+
 
 import java.util.function.Consumer;
+
+import Thread.Producer;
 
 public class ConsumerFunctional {
 
@@ -10,6 +12,10 @@ public class ConsumerFunctional {
 		
 		
 		exp.accept("exmaple to consumer functional interface");
+		
+		
+	   
+	        
 	
 	}
 }
