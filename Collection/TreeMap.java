@@ -18,7 +18,7 @@ public class TreeMap {
 		
 		//tree map internally use compareTO to sort the elemnt// return -1 left side return 1 right side daal do
 		System.out.print(map);
-		
+		//{1=dks, 2=hgfj, 3=hgdks, 4=jdks}
 		
 		
 	}
