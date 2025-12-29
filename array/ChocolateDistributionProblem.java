@@ -2,7 +2,7 @@ package array;
 
 import java.util.Arrays;
 
-public class StockBuy {
+public class ChocolateDistributionProblem {
 
     public static void main(String[] args) {
         int[] arr = {3, 4, 1, 9, 56, 7, 9, 12};
@@ -19,5 +19,7 @@ public class StockBuy {
         System.out.println(minDiff);
     }
 }
+
+
 
 
