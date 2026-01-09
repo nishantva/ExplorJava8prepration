@@ -21,7 +21,7 @@ public class SubArraySum5 {
         HashMap<Integer, Integer> map = new HashMap<>();
 
         // important base case
-        map.put(0, 1);
+        map.put(0, 1);  //It handles subarrays that start from index 0.
 
         for (int i = 0; i < arr.length; i++) {
 
@@ -43,3 +43,4 @@ public class SubArraySum5 {
         System.out.println("Total subarrays with sum " + key + " = " + count);
     }
 }
+
