@@ -15,7 +15,7 @@ class Solution {
         for(int i=1;i<=s.length();i++){
 
             for(int j=0;j<i;j++){
-                if(dp[j] && dinct.contains(s.substring(j,i))){
+                if(dp[j] && dinct.contains(s.substring(j,i))){   //  s.substring(j, i) exists in dictionary
                     dp[i] =true;
                     break;
                 }
