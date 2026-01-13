@@ -1,5 +1,5 @@
 Example 1:
-
+/// Time Complexity: ✅ O(n³)
 Input: s = "babad"
 Output: "bab"
 Explanation: "aba" is also a valid answer.
