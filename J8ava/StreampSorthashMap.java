@@ -28,8 +28,20 @@ public class StreampSorthashMap {
 		Map.Entry<String, Integer>  result1=map.entrySet().stream().sorted(Collections.reverseOrder(Map.Entry.comparingByValue())).collect(Collectors.toList()).get(1);
 		//System.out.println(result1);
 	//	
+Bonus: Second Largest VALUE only
+Integer secondLargest =
+        map.values()
+           .stream()
+           .sorted(Comparator.reverseOrder())
+           .skip(1)
+           .findFirst()
+           .orElse(null);
+
+System.out.println(secondLargest);
+		
 
 		
 	}
 
 }
+
