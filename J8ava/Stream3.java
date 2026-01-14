@@ -198,8 +198,35 @@ public class Stream3 {
 		//System.out.println(null);
 		
 		 Optional<Employee> max=employeeList.stream().max(Comparator.comparingDouble(Employee::getSalary));
-		 
-		 
+
+		
+		 8. Youngest female employee
+Optional<Employee> youngestFemale =
+        employeeList.stream()
+        .filter(e -> e.getGender().equalsIgnoreCase("Female"))
+        .min(Comparator.comparingInt(Employee::getAge));
+
+youngestFemale.ifPresent(System.out::println);
+
+
+		✅ 9. Employees in Product Development department
+employeeList.stream()
+        .filter(e -> e.getDepartment().equals("Product Development"))
+        .map(Employee::getName)
+        .forEach(System.out::println);
+
+		
+		 Optional<Employee> secondHighestSalary =
+        employeeList.stream()
+        .sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+        .skip(1)
+        .findFirst();
+
+secondHighestSalary.ifPresent(e ->
+        System.out.println("Second Highest Salary: " + e.getSalary()
+                + ", Name: " + e.getName()));
+
 	}
 
 }
+
