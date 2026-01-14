@@ -212,8 +212,8 @@ youngestFemale.ifPresent(System.out::println);
 		✅ 9. Employees in Product Development department
 employeeList.stream()
         .filter(e -> e.getDepartment().equals("Product Development"))
-        .map(Employee::getName)
-        .forEach(System.out::println);
+        .map(e -> e.getName())
+        .forEach(e -> System.out.println(e));
 
 		
 		 Optional<Employee> secondHighestSalary =
@@ -229,4 +229,5 @@ secondHighestSalary.ifPresent(e ->
 	}
 
 }
+
 
