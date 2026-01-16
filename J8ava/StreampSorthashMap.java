@@ -36,7 +36,7 @@ Integer secondLargest =
            .skip(1)
            .findFirst()
            .orElse(null);
-
+// secondLargest = 500;
 System.out.println(secondLargest);
 		
 
@@ -44,4 +44,5 @@ System.out.println(secondLargest);
 	}
 
 }
+
 
