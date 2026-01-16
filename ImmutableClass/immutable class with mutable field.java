@@ -6,7 +6,7 @@ final class Employee {
 
     public Employee(int id, List<String> skills) {
         this.id = id;
-        this.skills = new ArrayList<>(skills);
+        this.skills = new ArrayList<>(skills);   // this is called defence copy
     }
 
     public List<String> getSkills() {
