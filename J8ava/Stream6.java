@@ -91,8 +91,13 @@ public static void main(String arg[]) {
            
          //  decorder.forEach(i->System.out.print(i));
            //higest paid employee form each dept
+	      //Department → List of Employees
+
            
-           Map<String,List<Employee>> deptwisesalary=employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment));
-           System.out.println("deptwisesalary"+ deptwisesalary);
+           Map<String, List<Employee>> deptWiseEmployees =
+    employeeList.stream()
+        .collect(Collectors.groupingBy(Employee::getDepartment));
+
 }
 }
+
