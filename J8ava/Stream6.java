@@ -40,7 +40,7 @@ public static void main(String arg[]) {
              // employeeList.stream().filter(i->i.age>30).forEachOrdered(i->System.out.println(i.name));
               
               
-              List<Employee>  taxname= employeeList.stream().filter(i->i.salary>10000).collect(Collectors.toList());
+              List<Employee>  taxname= employeeList.stream().filter(i->i.salary()>10000).collect(Collectors.toList());
               
               for (Employee employee : taxname) {
 				//System.out.println(employee.name +" "+employee.salary );
@@ -100,4 +100,5 @@ public static void main(String arg[]) {
 
 }
 }
+
 
