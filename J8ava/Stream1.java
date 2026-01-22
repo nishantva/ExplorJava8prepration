@@ -32,8 +32,21 @@ public class Stream1 {
 		List<String> liststring=keyword.stream().map(String::toLowerCase).filter(i->i.startsWith("a")).collect(Collectors.toList());
 		
 		liststring.forEach(i->System.out.print(i+" "));
+
+		List<String> keyword =Arrays.asList("Apple","mango","orange","cherry");
+
 		
+		List<String> sorted =
+        keyword.stream()
+               .sorted()
+               .collect(Collectors.toList());
+
+System.out.println(sorted);
+
 		
+		// [Apple, cherry, mango, orange]
+
 	}
 
 }
+
