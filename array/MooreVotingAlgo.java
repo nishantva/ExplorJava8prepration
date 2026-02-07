@@ -1,6 +1,6 @@
 package array;
 
-public class MooreVotingAlgo {
+public class kadane {
 	
 	public static void main(String arg[]) {
 		int arr[]= {1,2,3,-2,5};
@@ -18,3 +18,4 @@ public class MooreVotingAlgo {
 	}
  
 }
+
