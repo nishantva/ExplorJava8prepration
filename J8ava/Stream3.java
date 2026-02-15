@@ -227,7 +227,13 @@ secondHighestSalary.ifPresent(e ->
                 + ", Name: " + e.getName()));
 
 	}
+           
+           Map<String, List<Employee>> deptWiseEmployees =
+    employeeList.stream()
+        .collect(Collectors.groupingBy(Employee::getDepartment));
+
 
 }
+
 
 
