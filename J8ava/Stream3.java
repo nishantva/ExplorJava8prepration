@@ -233,7 +233,24 @@ secondHighestSalary.ifPresent(e ->
         .collect(Collectors.groupingBy(Employee::getDepartment));
 
 
+	1️⃣ Group Employees by Gender
+Map<String, List<Employee>> genderWise =
+        employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getGender));
+
+
+	6️⃣ Find Oldest Employee in Each Department (Important)
+Map<String, Optional<Employee>> oldestByDept =
+        employeeList.stream()
+                .collect(Collectors.groupingBy(
+                        Employee::getDepartment,
+                        Collectors.maxBy(Comparator.comparing(Employee::getAge))
+                ));
+
+	
+
 }
+
 
 
 
