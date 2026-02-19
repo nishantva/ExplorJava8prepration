@@ -231,6 +231,11 @@ secondHighestSalary.ifPresent(e ->
            Map<String, List<Employee>> deptWiseEmployees =
     employeeList.stream()
         .collect(Collectors.groupingBy(Employee::getDepartment));
+	{
+  "IT" -> [Ram, Mohan],
+  "HR" -> [Shyam]
+}
+
 
 
 	1️⃣ Group Employees by Gender
@@ -250,6 +255,7 @@ Map<String, Optional<Employee>> oldestByDept =
 	
 
 }
+
 
 
 
