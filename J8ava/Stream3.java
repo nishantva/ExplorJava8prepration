@@ -232,7 +232,7 @@ secondHighestSalary.ifPresent(e ->
     employeeList.stream()
         .collect(Collectors.groupingBy(Employee::getDepartment));
 	{
-  "IT" -> [Ram, Mohan],
+  "IT" -> [Ram, Mohan],  give whole object
   "HR" -> [Shyam]
 }
 
@@ -252,9 +252,31 @@ Map<String, Optional<Employee>> oldestByDept =
                         Collectors.maxBy(Comparator.comparing(Employee::getAge))
                 ));
 
-	
+	Map<String, List<String>> deptWiseEmployeeNames =
+        employeeList.stream()
+                .collect(Collectors.groupingBy(
+                        Employee::getDepartment,
+                        Collectors.mapping(Employee::getName, Collectors.toList())
+                ));
+
+System.out.println(deptWiseEmployeeNames);
+
+/*
+Sample Output:
+
+{
+HR=[Jiya Brein, Nima Roy],
+Sales And Marketing=[Paul Niksui, Amelia Zoe, Nicolus Den],
+Infrastructure=[Martin Theron, Jasna Kaur, Ali Baig],
+Product Development=[Murali Gowda, Wang Liu, Nitin Joshi, Sanvi Pandey, Anuj Chettiar],
+Security And Transport=[Iqbal Hussain, Jaden Dough],
+Account And Finance=[Manu Sharma, Jyothi Reddy]
+}
+*/
+
 
 }
+
 
 
 
