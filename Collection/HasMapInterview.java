@@ -15,6 +15,9 @@ public class HasMapInterview {
 		
 		System.out.println(map.get(2));// value is overide when we  add with the same key
 		System.out.println(map.size());
+		//104
+        //1
 	}
 
 }
+
